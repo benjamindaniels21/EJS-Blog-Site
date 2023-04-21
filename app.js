@@ -22,10 +22,16 @@ app.get("/", (req, res) => {
   res.render("home", { pageTitle: "Home", homeContent: homeStartingContent });
 });
 app.get("/about", (req, res) => {
-  res.render("about");
+  res.render("about", {
+    pageTitle: "About",
+    aboutContent: aboutContent,
+  });
 });
 app.get("/contact", (req, res) => {
-  res.render("contact");
+  res.render("contact", {
+    pageTitle: "Contact",
+    contactContent: contactContent,
+  });
 });
 
 app.listen(3000, function () {
