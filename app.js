@@ -39,8 +39,9 @@ app.get("/compose", (req, res) => {
 });
 
 app.post("/compose", (req, res) => {
-  const newPost = req.body.newPost;
-  console.log(newPost);
+  const newPostTitle = req.body.postTitle; // grab new post title
+  const newPost = req.body.newPost; // grab new post title
+  console.log(newPostTitle, newPost);
 });
 
 app.listen(3000, function () {
