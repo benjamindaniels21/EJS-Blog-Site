@@ -58,7 +58,8 @@ app.get("/posts/:postName", (req, res) => {
   const url = req.params.postName;
 
   posts.forEach((post) => {
-    if (url === post.title) {
+    const storedTitle = post.title;
+    if (url === storedTitle) {
       console.log("yay");
     }
   });
