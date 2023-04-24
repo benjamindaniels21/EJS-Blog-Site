@@ -22,7 +22,9 @@ const posts = [];
 
 app.get("/", (req, res) => {
   res.render("home", { pageTitle: "Home", homeContent: homeStartingContent });
+  console.log(posts);
 });
+
 app.get("/about", (req, res) => {
   res.render("about", {
     pageTitle: "About",
@@ -47,7 +49,6 @@ app.post("/compose", (req, res) => {
   };
   posts.push(post);
 
-  console.log(posts);
   res.redirect("/");
 });
 
