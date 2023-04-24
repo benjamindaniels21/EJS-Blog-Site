@@ -56,7 +56,12 @@ app.post("/compose", (req, res) => {
 
 app.get("/posts/:postName", (req, res) => {
   const url = req.params.postName;
-  console.log(url);
+
+  posts.forEach((post) => {
+    if (url === post.title) {
+      console.log("yay");
+    }
+  });
 });
 
 app.listen(3000, function () {
