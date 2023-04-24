@@ -1,6 +1,13 @@
 <%- include("partials/header"); -%>
 
-<h1><%=pageTitle%></h1>
+<h1>Home</h1>
 <p><%=homeContent%></p>
+
+<%console.log(posts); %>
+
+<% for(let i =0; i<posts.length; i++){ %>
+    <h1><%=posts[i].title%></h1>
+    <p><%=posts[i].body%></p>
+<%}%>
 
 <%- include("partials/footer"); -%>
