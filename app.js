@@ -60,7 +60,7 @@ app.get("/posts/:postName", (req, res) => {
   posts.forEach((post) => {
     const storedTitle = post.title;
     if (url === storedTitle) {
-      console.log("yay");
+      console.log("Match Found");
     }
   });
 });
