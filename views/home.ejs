@@ -6,8 +6,11 @@
 <!-- <%console.log(posts); %> -->
 
 <% posts.forEach((post)=>{%>
+    <%   const str = post.body; %>
+    <% const newStr = str.substring(0,300); %>
+
     <h1><%=post.title%></h1>
-    <p class="post-body"><%=post.body%></p>
+    <p><%=newStr + "..."%></p>
 <%}) %>
 
 

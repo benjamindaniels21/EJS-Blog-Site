@@ -34,13 +34,3 @@
   color: #fff;
 }
 
-.post-body{
-display: inline-block;
-    padding: 9px;
-    height: 45px;
-    -webkit-line-clamp: 2;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
