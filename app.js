@@ -34,6 +34,7 @@ app.get("/about", (req, res) => {
     aboutContent: aboutContent,
   });
 });
+
 app.get("/contact", (req, res) => {
   res.render("contact", {
     pageTitle: "Contact",
@@ -62,9 +63,10 @@ app.get("/posts/:postName", (req, res) => {
     const storedTitle = _.lowerCase(post.title);
 
     if (url === storedTitle) {
-      console.log("Match Found");
-    } else {
-      console.log("Not Found");
+      res.render("post", {
+        pageTitle: post.title,
+        pageContent: post.body,
+      });
     }
   });
 });
