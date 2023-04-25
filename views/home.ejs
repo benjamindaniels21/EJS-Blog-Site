@@ -10,7 +10,7 @@
     <% const newStr = str.substring(0,300); %>
 
     <h1><%=post.title%></h1>
-    <p><%=newStr + "..."%></p>
+    <p><%=newStr + "... "%><a href="/posts/<%=post.title%>">Read More</a></p>
 <%}) %>
 
 
